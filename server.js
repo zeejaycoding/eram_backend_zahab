@@ -17,6 +17,8 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+console.log('mongo uri:', process.env.MONGO_URI);
+
 // ✅ Connect to MongoDB with Mongoose
 mongoose.connect(process.env.MONGO_URI, {
   serverSelectionTimeoutMS: 5000,
